@@ -1,5 +1,5 @@
 type Query {
-  users: [User!]!
+  user(id: ID!): User!
 }
 
 type Mutation {
@@ -8,7 +8,6 @@ type Mutation {
     password: String!
     name: String!
     username: String
-    name: String
     avatar: String
   ): AuthPayload
   login(email: String!, password: String!): AuthPayload
